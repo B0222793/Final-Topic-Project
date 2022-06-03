@@ -1,16 +1,13 @@
-#pragma once
 #ifndef SnakesAndLadders_H
 #define SnakesAndLadders_H
 
-class SnakesAndLadders
+class PLAYER
 {
 public:
-	int Dice();
+	PLAYER();
 
-	void setPlayer();
+	void setPlayer(int);
 	int getPlayer();
-
-	void print();
 
 private:
 	int player;

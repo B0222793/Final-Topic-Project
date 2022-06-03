@@ -5,22 +5,17 @@
 #include "snakesAndLadders.h"
 using namespace std;
 
-int SnakesAndLadders::Dice()
+PLAYER::PLAYER()
 {
-
+	player = 1;
 }
 
-void SnakesAndLadders::setPlayer()
+void PLAYER::setPlayer(int a)
 {
-
+	player += a;
 }
 
-int SnakesAndLadders::getPlayer()
+int PLAYER::getPlayer()
 {
-
-}
-
-void SnakesAndLadders::print()
-{
-
+	return player;
 }
