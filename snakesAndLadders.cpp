@@ -1,7 +1,4 @@
 #include <iostream>
-#include <iomanip>
-#include <ctime>
-#include <cstdlib>
 #include "snakesAndLadders.h"
 using namespace std;
 
