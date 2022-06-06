@@ -5,6 +5,15 @@
 #include "snakesAndLadders.h"
 using namespace std;
 
+void rules()
+{
+    cout << "蛇梯棋規則:" << endl;
+    cout << "棋盤上有100格,玩家擲骰子決定前進步數" << endl;
+    cout << "如果遇上梯子,升10格,梯子：4,20,41,63,72" << endl;
+    cout << "如果遇上蛇,降10格,蛇：17,54,62,87,95" << endl;
+    cout << "玩家位置抵達100即遊戲勝利" << endl << endl;
+}
+
 int throwDice;
 
 void Dice01()
@@ -24,15 +33,6 @@ int Dice02()
     }
 }
 
-void rules()
-{
-    cout << "蛇梯棋規則:" << endl;
-    cout << "棋盤上有100格,玩家擲骰子決定前進步數" << endl;
-    cout << "如果遇上梯子,升10格,梯子：4,20,41,63,72" << endl;
-    cout << "如果遇上蛇,降10格,蛇：17,54,62,87,95" << endl;
-    cout << "玩家位置抵達100即遊戲勝利" << endl << endl;
-}
-
 int main()
 {
     rules();
@@ -44,10 +44,11 @@ int main()
         cout << "骰子:" << Dice02() << endl;
 
         p1.setPlayer(Dice02());
-        if (p1.getPlayer() >= 100)
-            cout << "玩家位置：100" << endl;
-        else
+
+        if (p1.getPlayer() < 100)
             cout << "玩家位置：" << p1.getPlayer() << endl;
+        else
+            cout << "玩家位置：100" << endl;
 
         if (p1.getPlayer() == 4 or p1.getPlayer() == 20 or p1.getPlayer() == 41 or p1.getPlayer() == 63 or p1.getPlayer() == 72)
         {
